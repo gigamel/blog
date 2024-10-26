@@ -3,4 +3,5 @@
 return [
     \Package\Security\Package::class,
     \Package\Debug\Package::class,
+    \Package\Render\Package::class,
 ];
