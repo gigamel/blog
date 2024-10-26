@@ -11,6 +11,8 @@ final class LoginController extends AbstractController
 {
     public function __invoke(ClientMessageInterface $message): ServerMessageInterface
     {
-        return new ServerMessage('You need auth');
+        return new ServerMessage(
+            \file_get_contents(dirname(__DIR__) . '/src/view/login.php') ?: ''
+        );
     }
 }

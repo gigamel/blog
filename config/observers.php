@@ -2,6 +2,7 @@
 
 use App\Event\ClientMessageCreatedEvent;
 use App\Event\RouteFoundEvent;
+use App\Event\ServerMessageReceivedEvent;
 use App\Event\ThrowableEvent;
 
 return [
@@ -10,6 +11,9 @@ return [
     ],
     RouteFoundEvent::class => [
         \App\Observer\RouteFound\TypeControllerObserver::class,
+    ],
+    ServerMessageReceivedEvent::class => [
+        \App\Observer\ServerMessage\ServerHeadersObserver::class,
     ],
     ThrowableEvent::class => [
         \App\Observer\Throwable\DebugThrowableObserver::class,
