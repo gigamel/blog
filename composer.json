@@ -1,0 +1,18 @@
+{
+  "require": {
+    "php": ">=8.3",
+    "gigamel/framework": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src",
+      "Package\\": "packages"
+    }
+  },
+  "repositories": {
+    "gigamel/framework": {
+      "type": "vcs",
+      "url": "https://github.com/gigamel/framework.git"
+    }
+  }
+}
